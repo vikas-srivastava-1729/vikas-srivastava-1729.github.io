@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia Tools and Applications</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Change to white */
+    color: black;
+}
+      header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: white; /* Change to white */
+    color: #0a4d56; /* Ensure text is visible */
+}
+      .logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #0a4d56; /* Match the theme color */
+}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+      
+      
+.journal-intro {
+    display: flex;
+    align-items: flex-start; /* Align title and image properly */
+    padding: 30px;
+    gap: 20px; /* ✅ Adds space between image and text */
+    flex-wrap: wrap; /* ✅ Ensures wrapping for smaller screens */
+}
+
+.cover img {
+    width: 160px; /* Adjust size if needed */
+    border-radius: 5px;
+    flex-shrink: 0; /* ✅ Prevents image from shrinking */
+}
+
+.info {
+    max-width: 1000px; /* ✅ Limits text width for readability */
+}
+
+.info h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 10px; /* ✅ Adds spacing below title */
+}
+
+.info .subtitle {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 15px; /* ✅ Adds spacing below subtitle */
+}
+
+.info .publishing-model {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.submit-btn {
+    background-color: white;
+    color: #0a4d56;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.submit-btn::after {
+    content: "→"; /* Add arrow symbol */
+    font-size: 18px;
+}
+      /* NAVIGATION BAR */
+        .secondary-nav {
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px 20px;
+            background-color: white;
+            position: relative;
+            overflow: visible; /* ✅ Ensure dropdown is not cut off */
+                border-bottom: 1px solid #cce4f7; /* Light blue line */
+        }
+
+        .secondary-nav > div {
+            position: relative; /* ✅ Required for absolute dropdown positioning */
+            margin-right: 20px;
+        }
+
+        .secondary-nav a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #0a4d56;
+            padding: 10px;
+            display: block;
+        }
+
+        /* DROPDOWN MENU */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%; /* ✅ Always opens BELOW */
+            left: 0;
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            z-index: 1000;
+            min-width: 220px;
+        }
+
+        .dropdown a {
+            padding: 10px;
+            display: block;
+            color: #0a4d56;
+            white-space: nowrap;
+        }
+
+        .dropdown a:hover {
+            background-color: #005580;
+            color: white;
+        }
+
+        .overview {
+            padding: 20px;
+            background-color: white;
+            color: black;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Society of Mathematics and Computing Research</div>
+    </header>
+    <main>
+        <section class="journal-intro">
+            <div class="cover">
+                <img src="journal-cover.png" alt="Journal Cover">
+            </div>
+            <div class="info">
+                <h1> Transactions on Mathematics, Computing, and Its Applications</h1>
+                <p class="subtitle">A Peer-Reviewed International Journal</p>
+                <button class="submit-btn">Submit your manuscript </button>
+            </div>
+        </section>
+        
+<nav class="secondary-nav">
+        <div>
+            <a href="#" class="dropdown-btn">About this journal ▼</a>
+            <div class="dropdown">
+                <a href="#">Aims and scope</a>
+                <a href="#">Editorial board</a>
+                <a href="#">Editorial policies</a>
+                <a href="#">Rights and Permissions</a>
+                <a href="#">Ethics and disclosures</a>
+                <a href="#">Contact the journal</a>
+            </div>
+        </div>
+</nav>       
+  <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const dropdownButtons = document.querySelectorAll(".dropdown-btn");
+            const dropdowns = document.querySelectorAll(".dropdown");
+
+            dropdownButtons.forEach(button => {
+                button.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    dropdowns.forEach(dropdown => {
+                        if (dropdown !== this.nextElementSibling) {
+                            dropdown.style.display = "none";
+                        }
+                    });
+                    let dropdownMenu = this.nextElementSibling;
+                    dropdownMenu.style.display = (dropdownMenu.style.display === "block") ? "none" : "block";
+                });
+            });
+
+            document.addEventListener("click", function(event) {
+                if (!event.target.closest(".secondary-nav")) {
+                    dropdowns.forEach(dropdown => dropdown.style.display = "none");
+                }
+            });
+        });
+    </script>
+
+     <section class="overview">
+            <h2>Overview</h2>
+            <p>Content related to the journal overview...</p>
+        </section>
+    </main>
+</body>
+</html>
+
