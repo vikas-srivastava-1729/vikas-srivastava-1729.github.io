@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia Tools and Applications</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <style>
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+/* Responsive Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: white;
+    color: #0a4d56;
+    flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0a4d56;
+}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+      
+      
+
+/* Journal Intro - Responsive */
+.journal-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.cover img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 5px;
+}
+
+.info {
+    max-width: 800px;
+}
+
+
+.info h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 10px; /* ✅ Adds spacing below title */
+}
+
+.info .subtitle {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 15px; /* ✅ Adds spacing below subtitle */
+}
+
+.info .publishing-model {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Responsive Info Boxes */
+.info-box {
+    background-color: #f0f8ff;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #0073e6;
+    margin: 20px;
+    max-width: 90%;
+}
+
+        .info-box h2 {
+            margin-top: 0;
+        }
+
+/* Submit Button */
+.submit-btn {
+    background-color: white;
+    color: #0a4d56;
+    border: 2px solid #0a4d56;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.submit-btn::after {
+    content: "→";
+    font-size: 18px;
+}
+
+
+  .secondary-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 5%;
+    background-color: white;
+    border-bottom: 1px solid #cce4f7;
+}
+
+.secondary-nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0a4d56;
+    padding: 10px;
+    display: block;
+}
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    min-width: 220px;
+}
+
+.dropdown a {
+    padding: 10px;
+    display: block;
+    color: #0a4d56;
+    white-space: nowrap;
+}
+
+.dropdown a:hover {
+    background-color: #005580;
+    color: white;
+}
+
+
+        .overview {
+            padding: 20px;
+            background-color: white;
+            color: black;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Mobile Adjustments */
+@media (max-width: 768px) {
+    .secondary-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .secondary-nav > div {
+        margin-bottom: 10px;
+    }
+
+    .info {
+        text-align: center;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Society of Mathematics and Computing Research</div>
+    </header>
+    <main>
+        <section class="journal-intro">
+            <div class="cover">
+                <img src="journal-cover.png" alt="Journal Cover">
+            </div>
+            <div class="info">
+                <h1> Advances in Mathematical Sciences and Computing</h1>
+                <p class="subtitle">A Peer-Reviewed International Journal</p>
+                <button class="submit-btn">Submit your manuscript </button>
+            </div>
+        </section>
+        
+<nav class="secondary-nav">
+        <div>
+            <a href="#" class="dropdown-btn">About ▼</a>
+            <div class="dropdown">
+                <a href="#aimsscope">Aims and Scope</a>
+                <a href="#editorial-board">Editorial Board</a>
+                <a href="#editorial-policies">Editorial Policies, Ethics, and Disclosures</a>
+            </div>
+            
+            
+        </div>
+            <a href="#" class="dropdown-btn">Articles</a>      
+        </div>
+        
+        <div>
+            <a href="https://vikas-srivastava-1729.github.io/amsc/author-guidelines.html">For Authors</a>
+        
+            
+             </div>
+            <a href="#" class="dropdown-btn">Contact Journal</a>      
+        </div>
+</nav>       
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdownButtons = document.querySelectorAll(".dropdown-btn");
+        const dropdowns = document.querySelectorAll(".dropdown");
+
+        dropdownButtons.forEach(button => {
+            button.addEventListener("click", function(event) {
+                event.preventDefault();
+                dropdowns.forEach(dropdown => {
+                    if (dropdown !== this.nextElementSibling) {
+                        dropdown.style.display = "none";
+                    }
+                });
+                let dropdownMenu = this.nextElementSibling;
+                dropdownMenu.style.display = (dropdownMenu.style.display === "block") ? "none" : "block";
+            });
+        });
+
+        document.addEventListener("click", function(event) {
+            if (!event.target.closest(".secondary-nav")) {
+                dropdowns.forEach(dropdown => dropdown.style.display = "none");
+            }
+        });
+
+        // Close dropdown when clicking a submenu item
+        document.querySelectorAll(".dropdown a").forEach(item => {
+            item.addEventListener("click", function() {
+                dropdowns.forEach(dropdown => dropdown.style.display = "none");
+            });
+        });
+    });
+</script>
+
+ <div class="info-box">
+     <section id="aimsscope">
+            <h2>Aims and Scope</h2>
+            <p>Transactions on Mathematics, Computing, and its Applications is a broad-scoped peer-reviewed journal published by Society of Mathematics and Computing Research covering all mainstream branches of pure mathematics, applied mathematics, theoretical computer science, and scientific computing. <br> <br>
+            
+The journal welcomes a variety of article types: Research Manuscript, Research Letters, Letters to the Editor and Short Communications, Position Papers, Review Articles, Technical Notes, Special Issues and Special Sections A paper should be a significant contribution, well-written, and of interest to a wide audience. All manuscripts will undergo a strict refereeing process; acceptance for publication is based on at least two positive reviews from experts in the field. Submission of a manuscript acknowledges that the manuscript is original and is not, in whole or in part, published or submitted for publication elsewhere. Manuscripts must be written in English. It is the author's responsibility to make sure her/his manuscript is written in clear, unambiguous and grammatically correct language.
+</p>
+        </section>
+        </div>
+        
+        
+        
+         <div class="info-box">
+     <section id="editorial-board">
+            <h2>Editorial Board</h2>
+            <p>
+</p>
+        </section>
+        </div>
+        
+        
+           <div class="info-box">
+     <section id="editorial-policies">
+            <h2>Editorial Policies, Ethics, and Disclosures</h2>
+            <p>
+            
+The journal maintains a strong commitment to research integrity and ethical publishing. All published content undergoes a rigorous single-anonymous peer review process to ensure quality and credibility.<br> <br>
+The journal adheres to Committee on Publication Ethics (COPE) principles for handling research misconduct. Any allegations of misconduct are thoroughly investigated to uphold the integrity of academic research. <br> <br>
+To prevent unethical practices, all submissions may be screened using plagiarism detection software. If plagiarism is detected, the journal follows COPE’s established guidelines. <br> <br>
+A clear competing interest policy is in place to ensure transparency in the publication process. <br> <br>
+Authors are required to comply with international, national, and institutional standards for research reporting. This is particularly crucial for studies involving human or animal subjects, their data, biological materials, and informed consent. 
+
+</p>
+        </section>
+        </div>
+    </main>
+</body>
+</html>
+
