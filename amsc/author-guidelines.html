@@ -8,13 +8,18 @@
     <style>
 /* General Styles */
 /* Add margins to the body */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: white;
-    color: black;
+    background: linear-gradient(to right, #eef2f3, #ffffff); /* Soft gradient */
+    color: #333;
+    text-align:justify;
 }
+
 
 /* Add left and right margins to the main content */
 main {
@@ -191,6 +196,24 @@ header {
         text-align: center;
     }
 }
+
+
+html {
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
     </style>
 </head>
 <body>
@@ -203,7 +226,7 @@ header {
                 <img src="journal-cover.png" alt="Journal Cover">
             </div>
             <div class="info">
-                <h1> <a href="thetribhuj.com/amsc"> Advances in Mathematical Sciences and Computing </a> </h1>
+                <h1> <a href="https://thetribhuj.com/amsc/"> Advances in Mathematical Sciences and Computing </a> </h1>
                 <p class="subtitle">A Peer-Reviewed International Journal</p>
                 <button class="submit-btn">Submit your manuscript </button>
             </div>
@@ -211,26 +234,26 @@ header {
         
 <nav class="secondary-nav">
         <div>
-            <a href="#" class="dropdown-btn">About ▼</a>
+            <a href="https://thetribhuj.com/amsc/" class="dropdown-btn">About</a>
             <div class="dropdown">
-                <a href="#aimsscope">Aims and Scope</a>
-                <a href="#editorial-board">Editorial Board</a>
-                <a href="#editorial-policies">Editorial Policies, Ethics, and Disclosures</a>
+                <a href="https://thetribhuj.com/amsc#aimsscope">Aims and Scope</a>
+                <a href="https://thetribhuj.com/amsc#editorial-board">Editorial Board</a>
+                <a href="https://thetribhuj.com/amsc/#editorial-policies">Editorial Policies, Ethics, and Disclosures</a>
             </div>
             
             
         </div>
-            <a href="#" class="dropdown-btn">Articles</a>      
+            <a href="https://thetribhuj.com/amsc/article.html" class="dropdown-btn">Articles</a>      
         </div>
         
         <div>
-            <a href="https://vikas-srivastava-1729.github.io/amsc/author-guidelines.html">For Authors</a>
+            <a href="https://thetribhuj.com/amsc/author-guidelines.html">For Authors</a>
         
             
              </div>
-            <a href="#" class="dropdown-btn">Contact Journal</a>      
+            <a href="https://thetribhuj.com/amsc/contact.html" class="dropdown-btn">Contact Journal</a>      
         </div>
-</nav>       
+</nav>      
  <script>
     document.addEventListener("DOMContentLoaded", function() {
         const dropdownButtons = document.querySelectorAll(".dropdown-btn");
@@ -264,7 +287,7 @@ header {
     });
 </script>
 
-<body>
+    <a id="top"></a> <!-- Invisible anchor at the top -->
     <h1>Instructions for Authors</h1>
 
     <h2>Editorial Procedure</h2>
@@ -324,6 +347,7 @@ header {
 
     <h3>Disclosures and Declarations</h3>
     <p>All authors are requested to include information regarding sources of funding, financial or non-financial interests, study-specific approval by the appropriate ethics committee for research involving humans and/or animals, informed consent if the research involved human participants, and a statement on welfare of animals if the research involved animals (as appropriate).</p>
+        <a href="#top" class="back-to-top">↑ Back to Top</a>
 </body>
 </html>
 
