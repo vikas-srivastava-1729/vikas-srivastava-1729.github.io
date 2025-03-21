@@ -3,18 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multimedia Tools and Applications</title>
+    <title> Advances in Mathematical Sciences and Computing</title>
     <link rel="stylesheet" href="assets/styles.css">
     <style>
 /* General Styles */
+/* Add margins to the body */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: white;
-    color: black;
+    background: linear-gradient(to right, #eef2f3, #ffffff); /* Soft gradient */
+    color: #333;
+    text-align:justify;
 }
-/* Responsive Header */
+
+
+/* Add left and right margins to the main content */
+main {
+    margin: 0 5%; /* Adjust the percentage as needed */
+}
+
+/* Add margins to the instructions section */
+body h1, body h2, body h3, body p, body ul {
+    margin-left: 5%;
+    margin-right: 5%;
+}
 header {
     display: flex;
     justify-content: space-between;
@@ -114,46 +130,72 @@ header {
 }
 
 
-  .secondary-nav {
+ /* General Navigation Bar Styling */
+.secondary-nav {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-    padding: 10px 5%;
-    background-color: white;
-    border-bottom: 1px solid #cce4f7;
+    flex-wrap: wrap;
+    padding: 12px 5%;
+    background: linear-gradient(135deg, #f8f9fa, #e3f2fd); /* Soft gradient */
+    border-bottom: 2px solid #cce4f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Soft shadow */
+    border-radius: 8px;
 }
 
+/* Links inside Navigation */
 .secondary-nav a {
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 16px;
     color: #0a4d56;
-    padding: 10px;
-    display: block;
+    padding: 12px 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
 }
 
-  .dropdown {
+/* Hover Effect */
+.secondary-nav a:hover {
+    background-color: #0078A0;
+    color: white;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Dropdown Menu */
+.dropdown {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     background-color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
     z-index: 1000;
-    min-width: 220px;
+    min-width: 240px;
+    padding: 8px 0;
 }
 
+/* Dropdown Links */
 .dropdown a {
-    padding: 10px;
+    padding: 12px 18px;
     display: block;
     color: #0a4d56;
     white-space: nowrap;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
 }
 
+/* Dropdown Hover Effect */
 .dropdown a:hover {
-    background-color: #005580;
+    background: linear-gradient(90deg, #0078A0, #005580);
     color: white;
 }
+
+/* Show dropdown on hover */
+.secondary-nav li:hover .dropdown {
+    display: block;
+}
+
 
 
         .overview {
@@ -180,6 +222,24 @@ header {
         text-align: center;
     }
 }
+
+
+html {
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
     </style>
 </head>
 <body>
@@ -187,107 +247,28 @@ header {
         <div class="logo">The Tribhuj</div>
     </header>
     <main>
-        <section class="journal-intro">
-            <div class="cover">
-                <img src="journal-cover.png" alt="Journal Cover">
-            </div>
-            <div class="info">
-                <h1> Journal Name </h1>
-                <p class="subtitle">A Peer-Reviewed International Journal</p>
-                <button class="submit-btn">Submit your manuscript </button>
-            </div>
-        </section>
-        
-<nav class="secondary-nav">
-        <div>
-            <a href="#" class="dropdown-btn">About ▼</a>
-            <div class="dropdown">
-                <a href="#aimsscope">Aims and Scope</a>
-                <a href="#editorial-board">Editorial Board</a>
-                <a href="#editorial-policies">Editorial Policies, Ethics, and Disclosures</a>
-                <a href="#">Contact the Journal</a>
-            </div>
-            
-            
-        </div>
-            <a href="#" class="dropdown-btn">Articles</a>      
-        </div>
-        
-        <div>
-            <a href="https://vikas-srivastava-1729.github.io/site/author-guidelines.html">For Authors</a>
-        
-            
-             </div>
-            <a href="#" class="dropdown-btn">Contact Journal</a>      
-        </div>
-</nav>       
- <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const dropdownButtons = document.querySelectorAll(".dropdown-btn");
-        const dropdowns = document.querySelectorAll(".dropdown");
+       
 
-        dropdownButtons.forEach(button => {
-            button.addEventListener("click", function(event) {
-                event.preventDefault();
-                dropdowns.forEach(dropdown => {
-                    if (dropdown !== this.nextElementSibling) {
-                        dropdown.style.display = "none";
-                    }
-                });
-                let dropdownMenu = this.nextElementSibling;
-                dropdownMenu.style.display = (dropdownMenu.style.display === "block") ? "none" : "block";
-            });
-        });
-
-        document.addEventListener("click", function(event) {
-            if (!event.target.closest(".secondary-nav")) {
-                dropdowns.forEach(dropdown => dropdown.style.display = "none");
-            }
-        });
-
-        // Close dropdown when clicking a submenu item
-        document.querySelectorAll(".dropdown a").forEach(item => {
-            item.addEventListener("click", function() {
-                dropdowns.forEach(dropdown => dropdown.style.display = "none");
-            });
-        });
-    });
-</script>
 
  <div class="info-box">
      <section id="aimsscope">
-            <h2>Aims and Scope</h2>
-            <p>Transactions on Mathematics, Computing, and its Applications is a broad-scoped peer-reviewed journal published by Society of Mathematics and Computing Research covering all mainstream branches of pure mathematics, applied mathematics, theoretical computer science, and scientific computing. <br> <br>
-            
-The journal welcomes a variety of article types: Research Manuscript, Research Letters, Letters to the Editor and Short Communications, Position Papers, Review Articles, Technical Notes, Special Issues and Special Sections A paper should be a significant contribution, well-written, and of interest to a wide audience. All manuscripts will undergo a strict refereeing process; acceptance for publication is based on at least two positive reviews from experts in the field. Submission of a manuscript acknowledges that the manuscript is original and is not, in whole or in part, published or submitted for publication elsewhere. Manuscripts must be written in English. It is the author's responsibility to make sure her/his manuscript is written in clear, unambiguous and grammatically correct language.
-</p>
-        </section>
-        </div>
-        
-        
-        
-         <div class="info-box">
-     <section id="editorial-board">
-            <h2>Editorial Board</h2>
-            <p>
-</p>
-        </section>
-        </div>
-        
-        
-           <div class="info-box">
-     <section id="editorial-policies">
-            <h2>Editorial Policies, Ethics, and Disclosures</h2>
-            <p>
-            
-The journal maintains a strong commitment to research integrity and ethical publishing. All published content undergoes a rigorous single-anonymous peer review process to ensure quality and credibility.<br> <br>
-As a member of the Committee on Publication Ethics (COPE), the journal adheres to its principles for handling research misconduct. Any allegations of misconduct are thoroughly investigated to uphold the integrity of academic research. <br> <br>
-To prevent unethical practices, all submissions may be screened using plagiarism detection software. If plagiarism is detected, the journal follows COPE’s established guidelines. <br> <br>
-A clear competing interest policy is in place to ensure transparency in the publication process. <br> <br>
-Authors are required to comply with international, national, and institutional standards for research reporting. This is particularly crucial for studies involving human or animal subjects, their data, biological materials, and informed consent. 
+            <h2>The Tribhuj</h2>
+            <h1> <a href="https://thetribhuj.com/amsc/"> Click Here to Redirect to the Journal Website "Advances in Mathematical Sciences and Computing" </a> </h1>
+            <p>The Tribhuj is a dynamic and forward-thinking academic publishing house dedicated to advancing knowledge and innovation in Mathematics, Computing, and their applications. Our mission is to provide a high-quality platform for researchers, academicians, and professionals to share groundbreaking discoveries and developments in these fields. We are committed to maintaining the highest standards of academic integrity and excellence by ensuring rigorous peer-review processes and ethical publication practices. <br><br>
+
+Our flagship journal, Advances in Mathematical Sciences and Computing, is a broad-scoped, peer-reviewed publication covering mainstream branches of pure mathematics, applied mathematics, theoretical computer science, and scientific computing. This journal welcomes a diverse range of article types, including research manuscripts, research letters, position papers, review articles, technical notes, and special issues. Every submission undergoes a stringent review process to ensure its significance, clarity, and contribution to the academic community. <br><br>
+
+At The Tribhuj, we envision a future where scholarly communication thrives in an open and accessible manner. As part of our long-term commitment to academia, we plan to expand our portfolio by launching more journals across interdisciplinary domains, fostering a global exchange of ideas and research. Our goal is to support innovation and collaboration among researchers by providing a platform that upholds quality, transparency, and scholarly excellence. <br><br>
+
+We invite researchers, institutions, and academicians to join us in this endeavor as we continue to grow and contribute to the advancement of knowledge through our publishing initiatives.
+<br><br>
 
 </p>
         </section>
+        </div>
+        
+        
+        
         </div>
     </main>
 </body>
