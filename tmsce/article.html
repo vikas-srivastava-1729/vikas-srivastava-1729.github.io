@@ -239,6 +239,65 @@ html {
             font-size: 14px;
         }
 
+
+.article-card{
+    margin:40px 5%;
+    padding:28px 32px;
+    background:#fff;
+    border-radius:8px;
+    border:1px solid #e3e3e3;
+}
+
+.article-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:14px;
+    font-size:14px;
+    color:#666;
+}
+
+.tag{
+    background:#eef6ff;
+    color:#0a4d56;
+    padding:6px 12px;
+    border-radius:20px;
+    font-weight:600;
+}
+
+.doi{
+    color:#1a73e8;
+    margin-bottom:18px;
+    font-size:14px;
+}
+
+.article-title{
+    font-size:22px;
+    color:#0a4d56;
+    margin-bottom:14px;
+    line-height:1.5;
+}
+
+.authors{
+    font-size:16px;
+    margin-bottom:20px;
+    color:#333;
+}
+
+.article-actions a{
+    margin-right:30px;
+    font-weight:600;
+    text-decoration:none;
+    color:#0a4d56;
+    border-bottom:2px solid transparent;
+    padding-bottom:3px;
+}
+
+.article-actions a:hover{
+    border-color:#0a4d56;
+}
+
+
     </style>
 </head>
 <body>
@@ -267,22 +326,27 @@ html {
         
 <nav class="secondary-nav">
         <div>
-            <a href="https://thetribhuj.com/tmsce/" >About</a>
-           
-            
-            
+            <a href="https://thetribhuj.com/tmsce/">About</a>
+       </div>
+       <div>
+            <a href="https://thetribhuj.com/tmsce/article.html">Archives</a>      
         </div>
-            <a href="https://thetribhuj.com/tmsce/article.html">Articles</a>      
+        
+         <div>
+            <a href="https://thetribhuj.com/tmsce/eb.html">Editorial Board</a>      
         </div>
         
         <div>
-            <a href="https://thetribhuj.com/tmsce/author-guidelines.html">For Authors</a>
-        
+            <a href="https://thetribhuj.com/tmsce/author-guidelines.html">Author Guidelines</a>
+        </div>
+        <div>
+            <a href="https://thetribhuj.com/tmsce/ep.html">Ethics and Policy</a>
+        </div>
             
              </div>
             <a href="https://thetribhuj.com/tmsce/contact.html">Contact Journal</a>      
         </div>
-</nav>       
+</nav>           
  <script>
     document.addEventListener("DOMContentLoaded", function() {
         const dropdownButtons = document.querySelectorAll(".dropdown-btn");
@@ -319,6 +383,147 @@ html {
     <a id="top"></a> <!-- Invisible anchor at the top -->
     <h1>Articles</h1>
 
+<!--    
+<div class="article-card">
+
+  <div class="article-top">
+    <span class="tag">Original Article</span>
+    <span class="meta">TMSCE • 2026 • Vol 1 • Issue 1 • Pages 25–34</span>
+  </div>
+
+  <div class="doi">
+    https://doi.org/xx.xxxx/tmsce.xxxx
+  </div>
+
+  <h3 class="article-title">
+    Prediction of the Epidemic Strength of COVID-19 using Mathematical Modeling
+  </h3>
+
+  <div class="authors">
+    Vikas Srivastava, Sumit Kumar Debnath, Vishnu Pratap Singh
+  </div>
+
+  <div class="article-actions">
+    <a href="#">Abstract</a>
+    <a href="#">Full Text</a>
+    <a href="#">PDF</a>
+  </div>
+
+</div>
+
+
+<h2>Volume 1, Issue I, 2026</h2>
+<div class="article-card">
+
+  <div class="article-top">
+    <span class="tag">Original Article</span>
+    <span class="meta">Transactions on Mathematical Sciences and Computational Engineering • 2026 • Vol 1 • Issue 1 • Pages 25–34</span>
+  </div>
+
+  <h3 class="article-title">
+Towards a Secure Key Exchange Protocol Based on Artificial Neural Networks
+  </h3>
+
+  <div class="authors">
+Shalini Roy, Somnath Kumar
+  </div>
+
+  <div class="article-actions">
+    <a href="#">Abstract</a>
+    <a href="#">Full Text/PDF</a>
+  </div>
+
+</div>
+
+
+<div class="article-card">
+
+  <div class="article-top">
+    <span class="tag">Original Article</span>
+    <span class="meta">Transactions on Mathematical Sciences and Computational Engineering • 2026 • Vol 1 • Issue 1 • Pages 25–34</span>
+  </div>
+
+  <h3 class="article-title">
+Computational analysis of drinking behavior modeling through the Genocchi wavelet approach
+  </h3>
+
+  <div class="authors">
+Jasinth Sylvia, Surath Ghosh
+
+  </div>
+
+  <div class="article-actions">
+    <a href="#">Abstract</a>
+    <a href="#">Full Text/PDF</a>
+  </div>
+
+</div>
+
+<div class="article-card">
+
+  <div class="article-top">
+    <span class="tag">Original Article</span>
+    <span class="meta">Transactions on Mathematical Sciences and Computational Engineering • 2026 • Vol 1 • Issue 1 • Pages 25–34</span>
+  </div>
+
+  <h3 class="article-title">
+A Review of Code-Based Identification and Signature Schemes
+  </h3>
+
+  <div class="authors">
+Sapna Jyoti Patel
+  </div>
+
+  <div class="article-actions">
+    <a href="#">Abstract</a>
+    <a href="#">Full Text/PDF</a>
+  </div>
+
+</div>
+
+<div class="article-card">
+
+  <div class="article-top">
+    <span class="tag">Original Article</span>
+    <span class="meta">Transactions on Mathematical Sciences and Computational Engineering • 2026 • Vol 1 • Issue 1 • Pages 25–34</span>
+  </div>
+
+  <h3 class="article-title">
+Lattice-Based Aggregate and Sequential Aggregate Signatures: A Comprehensive Survey
+  </h3>
+
+  <div class="authors">
+Stuti Kumari, Kunal Dey
+  </div>
+
+  <div class="article-actions">
+    <a href="#">Abstract</a>
+    <a href="#">Full Text/PDF</a>
+  </div>
+
+</div>
+
+<div class="article-card">
+
+  <div class="article-top">
+    <span class="tag">Original Article</span>
+    <span class="meta">Transactions on Mathematical Sciences and Computational Engineering • 2026 • Vol 1 • Issue 1 • Pages 25–34</span>
+  </div>
+
+  <h3 class="article-title">
+Quantum Computing and Quantum Key Distribution: A Short Review for Beginners
+  </h3>
+
+  <div class="authors">
+   Sushmita Sarkar and Sourav Bera
+  </div>
+
+  <div class="article-actions">
+    <a href="#">Abstract</a>
+    <a href="#">Full Text/PDF</a>
+  </div>
+
+</div>-->
   
         <a href="#top" class="back-to-top">↑ Back to Top</a>
 </body>

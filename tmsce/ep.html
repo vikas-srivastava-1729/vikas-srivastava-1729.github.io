@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Transactions on Mathematical Sciences and Computational Engineering</title>
+    <title>Transactions on Mathematical Sciences and Computational Engineering</title>
     <link rel="stylesheet" href="assets/styles.css">
     <style>
 /* General Styles */
@@ -129,6 +129,7 @@ header {
     font-size: 18px;
 }
 
+
  /* General Navigation Bar Styling */
 .secondary-nav {
     display: flex;
@@ -238,18 +239,56 @@ html {
             text-decoration: none;
             font-size: 14px;
         }
+        
+        /* ===== Sticky + Print Footer ===== */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;   /* pushes footer to bottom */
+}
+
+/* Footer design */
+.site-footer {
+    border-top: 1px solid #999;
+    padding: 10px 5%;
+    font-size: 13px;
+    background: white;
+    color: #0a4d56;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Print: show footer on every page */
+@media print {
+    .site-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
 
     </style>
 </head>
 <body>
- <header>
+<header>
 <div class="logo" style="display:flex; align-items:center; gap:10px;">
   <a href="https://thetribhuj.com" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
     <span style="font-size:20px; font-weight:bold; color:#0a4d56;">The Tribhuj Publishers</span>
     <img src="logo_t.jpg" alt="The Tribhuj Logo" style="max-height:50px;">
   </a>
 </div>
-
+</header>
 </header>
     <main>
         <section class="journal-intro">
@@ -258,8 +297,8 @@ html {
             </div>
             <div class="info">
                 <h1> <a href="https://thetribhuj.com/tmsce/"> Transactions on Mathematical Sciences and Computational Engineering </a> </h1>
-                <p class="subtitle">A Peer-Reviewed International Journal</p>
-                
+               <p class="subtitle">A Peer-Reviewed International Journal</p>
+
 <a href="https://forms.gle/MPWxyQCVj1NceYhQ8" target="_blank">
     <button class="submit-btn">Submit your manuscript</button>
 </a>
@@ -288,7 +327,7 @@ html {
              </div>
             <a href="https://thetribhuj.com/tmsce/contact.html">Contact Journal</a>      
         </div>
-</nav>       
+</nav>            
  <script>
     document.addEventListener("DOMContentLoaded", function() {
         const dropdownButtons = document.querySelectorAll(".dropdown-btn");
@@ -322,85 +361,34 @@ html {
     });
 </script>
 
-    <a id="top"></a> <!-- Invisible anchor at the top -->
-    <h1>Instructions for Authors</h1>
-
-    <h2>Editorial Procedure</h2>
-    <h3>Single-Blind Peer Review</h3>
-    <p>The journal follows a single-blind reviewing procedure and publishes special/guest-edited issues. The peer review process for these articles is the same as the journal’s general peer review process.</p>
-    <p>If a guest editor authors an article in their issue/collection, they will not handle the peer review process.</p>
-
-    <h3>Editorial Procedure - Additional Information</h3>
-    <p>All submissions undergo an initial completeness check before being assigned to an Editor for suitability assessment. If an Editor is an author or has a competing interest, another Editorial Board member will oversee the review. Editors consider peer-reviewed reports but are not bound by them. A single concern from a reviewer or the Editor may lead to rejection.</p>
-
-    <h3>Time to First Decision</h3>
-    <p>The journal aims for a quick initial decision. Factors affecting timing include article length, reviewer availability, and complexity of review. Clear language and well-structured content help expedite the process.</p>
-    <p>Special issues may have different schedules—please check the Call for Papers.</p>
-
-    <h3>Time to Publication</h3>
-    <p>Accepted articles proceed immediately to production. If proofs are returned promptly, the article should be published online within 3-5 weeks.</p>
-
-    <h3>Article DOI</h3>
-    <p>Once proofed, articles are published online and assigned a DOI for citation. No further changes can be made after online publication.</p>
-
-<!--
-    <h2>Article Charges</h2>
-    <p>The journal requires a publication fee for accepted manuscripts. The journal will publish the research works as Open Access, which involves an Article Processing Fee. </p>
-    <h3>Benefits of Open Access</h3>
-    <ul>
-        <li> Wider Reach: Immediate global access enhances researcher engagement.</li>
-        <li>Greater Visibility: Open Access articles receive four times more views and 1.7 times more citations.</li>
-    </ul>
+ 
+        
+        
     
-    <p>
-  <strong>Article Processing Charges (APC):</strong>  
-  To support early submissions and promote open access, the journal is offering a <em>one-year APC waiver</em>.  
-  Authors submitting within the first year will not be charged any publication fees.
+
+        
+        
+           <div class="info-box">
+     <section id="editorial-policies">
+            <h2>Editorial Policies, Ethics, and Disclosures</h2>
+ <p>  
+The journal upholds a strong commitment to research integrity and ethical publishing. All submitted content undergoes a thorough single-anonymous peer review process to maintain high quality and credibility. <br> <br>  
+
+The journal follows the principles set by the Committee on Publication Ethics (COPE) for addressing research misconduct. Any claims of misconduct are carefully reviewed to preserve the integrity of academic research. <br> <br>  
+
+To prevent unethical practices, all submissions may be checked using plagiarism detection software. In cases where plagiarism is identified, the journal adheres to COPE’s established guidelines. <br> <br>  
+
+A well-defined competing interest policy ensures transparency throughout the publication process. <br> <br>  
+
+Authors must adhere to international, national, and institutional research reporting standards, particularly for studies involving human or animal subjects, their data, biological materials, and informed consent.  
 </p>
--->
-<h2>Article Charges</h2>
-<p>
-The journal is fully <strong>Open Access</strong> and does not require any publication fee.  
-All accepted manuscripts are published free of charge, ensuring that high-quality research is accessible to a global audience without financial barriers.
-</p>
 
-<h3>Benefits of Open Access</h3>
-<ul>
-    <li>Wider Reach: Immediate global access enhances researcher engagement.</li>
-    <li>Greater Visibility: Open Access articles typically receive more views and citations.</li>
-</ul>
+        </section>
+        </div>
+        
+   
 
-    <h2>Manuscript Submission</h2>
-    <p>By submitting a manuscript, authors confirm that the work has not been previously published, is not under review elsewhere, and has received approval from all co-authors (if applicable) and the relevant authorities at the institution where the research was conducted. The publisher bears no legal responsibility for any compensation claims that may arise.</p>
+    </main>
 
-    <h3>Permissions</h3>
-    <p>Authors must secure permission for any figures, tables, or text that have been previously published. If they intend to use such content in their manuscript, they must obtain authorization from the copyright holder(s) for both print and online formats and provide proof of permission upon submission. Any material submitted without proper documentation will be considered the original work of the authors.</p>
-
-    <h3>Online Submission</h3>
-    <p>Submit manuscripts via the “Submit manuscript” link, following on-screen instructions.</p>
-
-    <h3>Source Files</h3>
-    <p>All relevant editable source files (e.g., .docx, LaTeX) must be provided at submission and revision.</p>
-
-    <h2>Title Page</h2>
-    <p>Ensure the title page includes:</p>
-    <ul>
-        <li>Concise, informative title</li>
-        <li>Author name(s) and affiliation(s)</li>
-        <li>Corresponding author’s active email</li>
-        <li>16-digit ORCID (if available)</li>
-    </ul>
-
-    <h2>Statements and Declarations</h2>
-    <h3>Competing Interests</h3>
-    <p>Authors must disclose financial or non-financial interests related to the work.</p>
-
-    <h3>Research Data Policy</h3>
-    <p>The journal follows standard research data policy, encouraging data sharing. Sharing of all relevant research data is strongly encouraged and authors must add a Data Availability Statement to original research articles.</p>
-
-    <h3>Disclosures and Declarations</h3>
-    <p>Authors are required to provide details on funding sources, any financial or non-financial interests, ethical approval from the relevant committee for studies involving humans and/or animals, informed consent for research involving human participants, and a statement on animal welfare when applicable.</p>
-        <a href="#top" class="back-to-top">↑ Back to Top</a>
 </body>
 </html>
-

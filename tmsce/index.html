@@ -239,6 +239,44 @@ html {
             text-decoration: none;
             font-size: 14px;
         }
+        
+        /* ===== Sticky + Print Footer ===== */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;   /* pushes footer to bottom */
+}
+
+/* Footer design */
+.site-footer {
+    border-top: 1px solid #999;
+    padding: 10px 5%;
+    font-size: 13px;
+    background: white;
+    color: #0a4d56;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Print: show footer on every page */
+@media print {
+    .site-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
 
     </style>
 </head>
@@ -270,15 +308,21 @@ html {
 <nav class="secondary-nav">
         <div>
             <a href="https://thetribhuj.com/tmsce/">About</a>
-            
-            
+       </div>
+       <div>
+            <a href="https://thetribhuj.com/tmsce/article.html">Archives</a>      
         </div>
-            <a href="https://thetribhuj.com/tmsce/article.html">Articles</a>      
+        
+         <div>
+            <a href="https://thetribhuj.com/tmsce/eb.html">Editorial Board</a>      
         </div>
         
         <div>
-            <a href="https://thetribhuj.com/tmsce/author-guidelines.html">For Authors</a>
-        
+            <a href="https://thetribhuj.com/tmsce/author-guidelines.html">Author Guidelines</a>
+        </div>
+        <div>
+            <a href="https://thetribhuj.com/tmsce/ep.html">Ethics and Policy</a>
+        </div>
             
              </div>
             <a href="https://thetribhuj.com/tmsce/contact.html">Contact Journal</a>      
@@ -328,80 +372,38 @@ The journal welcomes a variety of article types: Research Manuscript, Research L
         </div>
         
         
+    
+
         
-      <div class="info-box">
-  <section id="editorial-board">
-    <h2>Editorial Board</h2>
+       
 
-    <h3>Editors in Chief</h3>
-    <ul>
-      <li>Sumit Kumar Debnath, National Institute of Technology Jamshedpur, India</li>
-      <li>Vishnu Pratap Singh, Visvesvaraya National Institute of Technology Nagpur, India</li>
-    </ul>
+    <div class="info-box">
+  <h2>Publisher Information</h2>
 
-    <h3> Editors</h3>
-    <ul>
-    <li> 
-    <li> Sihem Mesnager, University of Paris VIII,  France </li>
-</li>Pantelimon Stanica,  Naval Postgraduate School Monterey, USA </li>
-
-         <li>Sourav Mukhopadhyay, Indian Institute of Technology Kharagpur, India</li>
-    <li> Kouichi Sakurai, Kyushu University, Japan</li>
-      <li>Y Sreenivasa Rao, National Institute of Technology Warangal, India</li>
-     <li> Mehakpreet Singh, University of Limerick,
-Ireland </li>
-
-      <li>Dheerendra Mishra, Maulana Azad National Institute of Technology Bhopal, India</li>
- <li> Gokul K. C., Kathmandu University, Nepal </li>
-
-         <li>Sunil Kumar, National Institute of Technology Jamshedpur, India</li>
- 
-       <li>Vikas Srivastava, National Institute of Technology Warangal, India</li>
-      <li>Avishek Adhikari, Presidency University Kolkata, India</li>
-      <li>Anand Chauhan, Graphic Era Deemed to be University Dehradun, India</li>
-      <li>Partha Sarathi Roy, University of Wollongong, Australia</li>
-
-      <li>Ranjan Kumar, MLSM College Darbhanga, India</li>
-      <li>Ali Ebrahimnejad, Islamic Azad University, Iran</li>
- <li>  Pitam Singh, Motilal Nehru National Institute of Technology Allahabad, India </li>
-<li> Saiful Rahman Mondal, King Faisal University, Al Ahsa, KSA</li>
-
- <li>  Sharada Nandan Raw, National Institute of Technology Raipur, India </li>
-
- <li>  Jeremy Blum,  Penn State University Harrisburg, USA  </li> 
- 
- <li> Kuppalapalle Vajravelu, University of Central Florida, Orlando, USA
-<li> Carlo Cattani, Università della Tuscia, Italy </li>
-<li> Higinio Ramos, University of Salamanca, Spain </li>
-<li> Yanghong Huang, The University of Manchester,  United Kingdom </li>
-<li> Steven Golovkine, Université Laval, Quebec, Canada </li>
-
-
-    </ul>
-
-  </section>
+  <p>
+    <strong>The Tribhuj Publishers</strong> is the official publisher of the
+    <em>Transactions on Mathematical Sciences and Computational Engineering</em>.
+    The publisher is responsible for journal production, digital hosting,
+    dissemination, indexing support, and long-term archival preservation of all
+    published articles.
+  </p>
+  <p>
+    <strong>Address:</strong><br>
+    The Tribhuj Publishers<br>
+    DumDum, Kolkata – 700028, India
+  </p>
+  <p>
+  <strong>Publisher Website: </strong>
+  <a href="https://thetribhuj.com/">https://thetribhuj.com/</a>
+  </p>
+  <p>
+    <strong>Email:</strong> 
+    <a href="mailto:thetribhuj.official@gmail.com">thetribhuj.official@gmail.com</a>
+  </p>
 </div>
 
-        
-        
-           <div class="info-box">
-     <section id="editorial-policies">
-            <h2>Editorial Policies, Ethics, and Disclosures</h2>
- <p>  
-The journal upholds a strong commitment to research integrity and ethical publishing. All submitted content undergoes a thorough single-anonymous peer review process to maintain high quality and credibility. <br> <br>  
-
-The journal follows the principles set by the Committee on Publication Ethics (COPE) for addressing research misconduct. Any claims of misconduct are carefully reviewed to preserve the integrity of academic research. <br> <br>  
-
-To prevent unethical practices, all submissions may be checked using plagiarism detection software. In cases where plagiarism is identified, the journal adheres to COPE’s established guidelines. <br> <br>  
-
-A well-defined competing interest policy ensures transparency throughout the publication process. <br> <br>  
-
-Authors must adhere to international, national, and institutional research reporting standards, particularly for studies involving human or animal subjects, their data, biological materials, and informed consent.  
-</p>
-
-        </section>
-        </div>
     </main>
+
 </body>
 </html>
 
