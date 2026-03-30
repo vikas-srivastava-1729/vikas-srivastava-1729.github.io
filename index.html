@@ -4,33 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Transactions on Mathematical Sciences and Computational Engineering </title>
-    <link rel="stylesheet" href="assets/styles.css">
     <style>
-/* General Styles */
-/* Add margins to the body */
+    <link rel="stylesheet" href="assets/styles.css">
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #eef2f3, #ffffff); /* Soft gradient */
+    background: linear-gradient(to right, #eef2f3, #ffffff);
     color: #333;
-    text-align:justify;
+    text-align: justify;
 }
 
-
-/* Add left and right margins to the main content */
 main {
-    margin: 0 5%; /* Adjust the percentage as needed */
+    margin: 0 5%;
 }
 
-/* Add margins to the instructions section */
-body h1, body h2, body h3, body p, body ul {
+/* do NOT apply this to all ul */
+body h1, body h2, body h3, body p {
     margin-left: 5%;
     margin-right: 5%;
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -41,21 +37,12 @@ header {
     flex-wrap: wrap;
 }
 
-/* Logo */
 .logo {
     font-size: 20px;
     font-weight: bold;
     color: #0a4d56;
 }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-      
-      
 
-/* Journal Intro - Responsive */
 .journal-intro {
     display: flex;
     flex-direction: column;
@@ -63,7 +50,6 @@ header {
     padding: 20px;
     text-align: center;
 }
-
 
 .cover img {
     width: 100%;
@@ -75,18 +61,17 @@ header {
     max-width: 800px;
 }
 
-
 .info h1 {
     font-size: 32px;
     font-weight: bold;
     text-decoration: underline;
-    margin-bottom: 10px; /* ✅ Adds spacing below title */
+    margin-bottom: 10px;
 }
 
 .info .subtitle {
     font-size: 18px;
     font-weight: normal;
-    margin-bottom: 15px; /* ✅ Adds spacing below subtitle */
+    margin-bottom: 15px;
 }
 
 .info .publishing-model {
@@ -95,7 +80,6 @@ header {
     margin-bottom: 15px;
 }
 
-/* Responsive Info Boxes */
 .info-box {
     background-color: #f0f8ff;
     padding: 15px;
@@ -105,11 +89,10 @@ header {
     max-width: 90%;
 }
 
-        .info-box h2 {
-            margin-top: 0;
-        }
+.info-box h2 {
+    margin-top: 0;
+}
 
-/* Submit Button */
 .submit-btn {
     background-color: white;
     color: #0a4d56;
@@ -129,118 +112,58 @@ header {
     font-size: 18px;
 }
 
+/* TOP NAV */
+.top-nav {
+    background: #0a4d56;
+    padding: 0 5%;
+}
 
- /* General Navigation Bar Styling */
-.secondary-nav {
+.top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 12px 5%;
-    background: linear-gradient(135deg, #f8f9fa, #e3f2fd); /* Soft gradient */
-    border-bottom: 2px solid #cce4f7;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Soft shadow */
-    border-radius: 8px;
 }
 
-/* Links inside Navigation */
-.secondary-nav a {
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    color: #0a4d56;
-    padding: 12px 15px;
-    transition: all 0.3s ease-in-out;
-    border-radius: 5px;
+.top-nav ul li {
+    position: relative;
 }
 
-/* Hover Effect */
-.secondary-nav a:hover {
-    background-color: #0078A0;
+.top-nav ul li a {
+    display: block;
     color: white;
-    transform: scale(1.05); /* Slight zoom effect */
+    text-decoration: none;
+    padding: 14px 18px;
+    font-weight: 500;
+    margin: 0;
 }
 
-/* Dropdown Menu */
-.dropdown {
-    display: none;
+.top-nav ul li a:hover {
+    background: #08606b;
+}
+
+/
+
+.dropdown-menu {
+    display: none !important;   /* 🔥 force hide */
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: white;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12);
-    border-radius: 8px;
+    background: white;
+    min-width: 320px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
     z-index: 1000;
-    min-width: 240px;
-    padding: 8px 0;
 }
 
-/* Dropdown Links */
-.dropdown a {
-    padding: 12px 18px;
-    display: block;
-    color: #0a4d56;
-    white-space: nowrap;
-    font-size: 15px;
-    transition: all 0.3s ease-in-out;
+.dropdown-parent:hover > .dropdown-menu {
+    display: block !important;  /* 🔥 show only on hover */
 }
 
-/* Dropdown Hover Effect */
-.dropdown a:hover {
-    background: linear-gradient(90deg, #0078A0, #005580);
-    color: white;
-}
-
-/* Show dropdown on hover */
-.secondary-nav li:hover .dropdown {
-    display: block;
-}
-
-
-
-        .overview {
-            padding: 20px;
-            background-color: white;
-            color: black;
-            margin: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Mobile Adjustments */
-@media (max-width: 768px) {
-    .secondary-nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .secondary-nav > div {
-        margin-bottom: 10px;
-    }
-
-    .info {
-        text-align: center;
-    }
-}
-
-
-html {
-            scroll-behavior: smooth; /* Enables smooth scrolling */
-        }
-        
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #007bff;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-    </style>
+</style>
 </head>
 <body>
   <header>
@@ -251,6 +174,24 @@ html {
   </a>
 </div>
 </header>
+<nav class="top-nav">
+    <ul>
+        <li><a href="#">About</a></li>
+
+        <li class="dropdown-parent">
+            <a href="#">Journals ▾</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="https://thetribhuj.com/tmsce/">
+                        Transactions on Mathematical Sciences and Computational Engineering
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
     <main>
        
 
@@ -288,7 +229,7 @@ We invite researchers, institutions, and academicians to join us in this endeavo
       <p><strong>Email:</strong> thetribhuj.official@gmail.com</p>
       <p><strong>Postal Address:</strong><br>
         The Tribhuj Publishers<br>
-        3B, Payel Apartment, Bandhabnagar <br>
+        2C, Payel Apartment, Bandhabnagar <br>
  Dum Dum, Kolkata-700028, West Bengal, India
       </p>
 

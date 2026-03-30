@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transactions on Mathematical Sciences and Computational Engineering</title>
+
+<link rel="stylesheet" href="assets/styles.css">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #eef2f3, #ffffff);
+    color: #333;
+    text-align: justify;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    background-color: white;
+}
+
+/* LOGO */
+.logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0a4d56;
+}
+
+/* TOP NAVIGATION */
+.top-nav {
+    background: #0a4d56;
+    padding: 0 5%;
+}
+
+.top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.top-nav li {
+    position: relative;
+}
+
+.top-nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 18px;
+    font-weight: 500;
+}
+
+.top-nav a:hover {
+    background: #08606b;
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 320px;
+    background: white;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.dropdown-menu li a {
+    color: #0a4d56;
+    padding: 12px 16px;
+}
+
+.dropdown-menu li a:hover {
+    background: #f2f8f9;
+}
+
+.dropdown-parent:hover .dropdown-menu {
+    display: block;
+}
+
+/* CONTENT */
+main {
+    margin: 0 5%;
+}
+
+.info-box {
+    background-color: #f0f8ff;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #0073e6;
+    margin: 20px 0;
+}
+
+h1, h2, h3, p {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .top-nav ul {
+        flex-direction: column;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <a href="https://thetribhuj.com" style="text-decoration:none;">
+            <span>The Tribhuj Publishers</span>
+        </a>
+    </div>
+</header>
+
+<!-- TOP NAVBAR -->
+<nav class="top-nav">
+    <ul>
+        <li><a href="#about">About</a></li>
+
+        <li class="dropdown-parent">
+            <a href="#">Journals ▾</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="https://thetribhuj.com/tmsce/" target="_blank">
+                        Transactions on Mathematical Sciences and Computational Engineering
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Upcoming Journals (Coming Soon)</a>
+                </li>
+            </ul>
+        </li>
+
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<!-- ABOUT -->
+<div class="info-box" id="about">
+<section>
+<h1>The Tribhuj Publishers</h1>
+
+<h2>About Us</h2>
+
+<p>
+The Tribhuj Publishers is a dynamic and forward-thinking academic publishing house dedicated to advancing knowledge and innovation in Mathematics, Computing, and their applications.
+
+Our flagship journal 
+<a href="https://thetribhuj.com/tmsce/" target="_blank">
+Transactions on Mathematical Sciences and Computational Engineering
+</a> 
+is a peer-reviewed publication covering pure mathematics, applied mathematics, theoretical computer science, and scientific computing.
+</p>
+</section>
+</div>
+
+<!-- CONTACT -->
+<div class="info-box" id="contact">
+<h2>Contact Us</h2>
+
+<p>Email: thetribhuj.official@gmail.com</p>
+
+<p>
+Postal Address:<br>
+The Tribhuj Publishers<br>
+Kolkata, India
+</p>
+
+<h3>Journals Published by Us</h3>
+<ul>
+<li>
+<a href="https://thetribhuj.com/tmsce/" target="_blank">
+Transactions on Mathematical Sciences and Computational Engineering (TMSCE)
+</a>
+</li>
+<li>Upcoming Journals</li>
+</ul>
+</div>
+
+</main>
+
+</body>
+</html>
