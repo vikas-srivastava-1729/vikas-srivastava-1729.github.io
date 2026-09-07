@@ -3,249 +3,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Transactions on Mathematical Sciences and Computational Engineering </title>
-    <style>
+    <title>Transactions on Mathematical Sciences and Computational Engineering</title>
+
     <link rel="stylesheet" href="assets/styles.css">
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
 
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, #eef2f3, #ffffff);
-    color: #333;
-    text-align: justify;
-}
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #eef2f3, #ffffff);
+            color: #333;
+            text-align: justify;
+        }
 
-main {
-    margin: 0 5%;
-}
+        main {
+            margin: 0 5%;
+        }
 
-/* do NOT apply this to all ul */
-body h1, body h2, body h3, body p {
-    margin-left: 5%;
-    margin-right: 5%;
-}
+        /* do NOT apply this to all ul */
+        body h1,
+        body h2,
+        body h3,
+        body p {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 5%;
-    background-color: white;
-    color: #0a4d56;
-    flex-wrap: wrap;
-}
+        /* ---------- Header ---------- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            background-color: white;
+            color: #0a4d56;
+            flex-wrap: wrap;
+        }
 
-.logo {
-    font-size: 20px;
-    font-weight: bold;
-    color: #0a4d56;
-}
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-.journal-intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-}
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
 
-.cover img {
-    width: 100%;
-    max-width: 200px;
-    border-radius: 5px;
-}
+        .logo-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0a4d56;
+        }
 
-.info {
-    max-width: 800px;
-}
+        .logo img {
+            max-height: 50px;
+        }
 
-.info h1 {
-    font-size: 32px;
-    font-weight: bold;
-    text-decoration: underline;
-    margin-bottom: 10px;
-}
+        /* ---------- Intro / cover (kept for future use) ---------- */
+        .journal-intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
 
-.info .subtitle {
-    font-size: 18px;
-    font-weight: normal;
-    margin-bottom: 15px;
-}
+        .cover img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 5px;
+        }
 
-.info .publishing-model {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
+        .info {
+            max-width: 800px;
+        }
 
-.info-box {
-    background-color: #f0f8ff;
-    padding: 15px;
-    border-radius: 8px;
-    border-left: 5px solid #0073e6;
-    margin: 20px;
-    max-width: 90%;
-}
+        .info h1 {
+            font-size: 32px;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
 
-.info-box h2 {
-    margin-top: 0;
-}
+        .info .subtitle {
+            font-size: 18px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
 
-.submit-btn {
-    background-color: white;
-    color: #0a4d56;
-    border: 2px solid #0a4d56;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 25px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
+        .info .publishing-model {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
 
-.submit-btn::after {
-    content: "→";
-    font-size: 18px;
-}
+        .info-box {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #0073e6;
+            margin: 20px;
+            max-width: 90%;
+        }
 
-/* TOP NAV */
-.top-nav {
-    background: #0a4d56;
-    padding: 0 5%;
-}
+        .info-box h2 {
+            margin-top: 0;
+        }
 
-.top-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
+        .submit-btn {
+            background-color: white;
+            color: #0a4d56;
+            border: 2px solid #0a4d56;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-.top-nav ul li {
-    position: relative;
-}
+        .submit-btn::after {
+            content: "→";
+            font-size: 18px;
+        }
 
-.top-nav ul li a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 14px 18px;
-    font-weight: 500;
-    margin: 0;
-}
+        /* ---------- Top navigation ---------- */
+        .top-nav {
+            background: #0a4d56;
+            padding: 0 5%;
+        }
 
-.top-nav ul li a:hover {
-    background: #08606b;
-}
+        /* Scoped to direct children only, so these rules don't leak into
+           the nested <ul class="dropdown-menu"> below (that was the bug:
+           ".top-nav ul" and ".top-nav ul li a" used to match the dropdown
+           too, forcing it to display:flex and painting its link text
+           white-on-white). */
+        .top-nav > ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
 
-/
+        .top-nav > ul > li {
+            position: relative;
+        }
 
-.dropdown-menu {
-    display: none !important;   /* 🔥 force hide */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    min-width: 320px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-    z-index: 1000;
-}
+        .top-nav > ul > li > a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 14px 18px;
+            font-weight: 500;
+            margin: 0;
+        }
 
-.dropdown-parent:hover > .dropdown-menu {
-    display: block !important;  /* 🔥 show only on hover */
-}
+        .top-nav > ul > li > a:hover {
+            background: #08606b;
+        }
 
-</style>
+        /* Dropdown menu: hidden by default, shown on hover of its parent */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 320px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+            z-index: 1000;
+        }
+
+        .dropdown-parent:hover > .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu li a {
+            display: block;
+            color: #0a4d56;
+            text-decoration: none;
+            padding: 12px 18px;
+            font-weight: 500;
+        }
+
+        .dropdown-menu li a:hover {
+            background: #f0f8ff;
+        }
+
+        .journals-list {
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-<div class="logo" style="display:flex; align-items:center; gap:10px;">
-  <a href="https://thetribhuj.com" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
-    <span style="font-size:20px; font-weight:bold; color:#0a4d56;">The Tribhuj Publishers</span>
-    <img src="logo_t.jpg" alt="The Tribhuj Logo" style="max-height:50px;">
-  </a>
-</div>
-</header>
-<nav class="top-nav">
-    <ul>
-        <li><a href="#">About</a></li>
 
-        <li class="dropdown-parent">
-            <a href="#">Journals ▾</a>
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="https://thetribhuj.com/tmsce/">
-                        Transactions on Mathematical Sciences and Computational Engineering
-                    </a>
-                </li>
-            </ul>
-        </li>
+    <header>
+        <div class="logo">
+            <a class="logo-link" href="https://thetribhuj.com">
+                <span class="logo-text">The Tribhuj Publishers</span>
+                <img src="logo_t.jpg" alt="The Tribhuj Logo">
+            </a>
+        </div>
+    </header>
 
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
+    <nav class="top-nav">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li class="dropdown-parent">
+                <a href="#">Journals ▾</a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="https://thetribhuj.com/tmsce/">
+                            Transactions on Mathematical Sciences and Computational Engineering
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
     <main>
-       
 
+        <div class="info-box">
+            <section id="aimsscope">
+                <h1>The Tribhuj Publishers</h1>
 
- <div class="info-box">
-     <section id="aimsscope">
-            <h1>The Tribhuj Publishers</h1>
-            
-            <h2>About Us</h2>
-            
-            <p>The Tribhuj Publishers is a dynamic and forward-thinking academic publishing house dedicated to advancing knowledge and innovation in Mathematics, Computing, and their applications. Our mission is to provide a high-quality platform for researchers, academicians, and professionals to share groundbreaking discoveries and developments in these fields. We are committed to maintaining the highest standards of academic integrity and excellence by ensuring rigorous peer-review processes and ethical publication practices. <br><br>
+                <h2>About Us</h2>
 
-Our flagship journal <a href="https://thetribhuj.com/tmsce/"> Transactions on Mathematical Sciences and Computational Engineering</a> is a broad-scoped, peer-reviewed publication covering mainstream branches of pure mathematics, applied mathematics, theoretical computer science, and scientific computing. This journal welcomes a diverse range of article types, including research manuscripts, research letters, position papers, review articles, technical notes, and special issues. Every submission undergoes a stringent review process to ensure its significance, clarity, and contribution to the academic community. <br><br>
+                <p>
+                    The Tribhuj Publishers is a dynamic and forward-thinking academic publishing house
+                    dedicated to advancing knowledge and innovation in Mathematics, Computing, and their
+                    applications. Our mission is to provide a high-quality platform for researchers,
+                    academicians, and professionals to share groundbreaking discoveries and developments
+                    in these fields. We are committed to maintaining the highest standards of academic
+                    integrity and excellence by ensuring rigorous peer-review processes and ethical
+                    publication practices.
+                </p>
 
-At The Tribhuj, we envision a future where scholarly communication thrives in an open and accessible manner. As part of our long-term commitment to academia, we plan to expand our portfolio by launching more journals across interdisciplinary domains, fostering a global exchange of ideas and research. Our goal is to support innovation and collaboration among researchers by providing a platform that upholds quality, transparency, and scholarly excellence. <br><br>
+                <p>
+                    Our flagship journal
+                    <a href="https://thetribhuj.com/tmsce/">Transactions on Mathematical Sciences and Computational Engineering</a>
+                    is a broad-scoped, peer-reviewed publication covering mainstream branches of pure
+                    mathematics, applied mathematics, theoretical computer science, and scientific
+                    computing. This journal welcomes a diverse range of article types, including research
+                    manuscripts, research letters, position papers, review articles, technical notes, and
+                    special issues. Every submission undergoes a stringent review process to ensure its
+                    significance, clarity, and contribution to the academic community.
+                </p>
 
-We invite researchers, institutions, and academicians to join us in this endeavor as we continue to grow and contribute to the advancement of knowledge through our publishing initiatives.
-<br><br>
+                <p>
+                    At The Tribhuj, we envision a future where scholarly communication thrives in an open
+                    and accessible manner. As part of our long-term commitment to academia, we plan to
+                    expand our portfolio by launching more journals across interdisciplinary domains,
+                    fostering a global exchange of ideas and research. Our goal is to support innovation
+                    and collaboration among researchers by providing a platform that upholds quality,
+                    transparency, and scholarly excellence.
+                </p>
 
-</p>
-        </section>
+                <p>
+                    We invite researchers, institutions, and academicians to join us in this endeavor as
+                    we continue to grow and contribute to the advancement of knowledge through our
+                    publishing initiatives.
+                </p>
+            </section>
         </div>
-        
-        
-        
+
+        <!-- Contact Section -->
+        <div class="info-box">
+            <h2>Contact Us</h2>
+            <p>
+                We welcome your queries regarding journals, submissions, and collaborations.
+                Please feel free to reach out to us:
+            </p>
+            <p><strong>Email:</strong> thetribhuj.official@gmail.com</p>
+            <p><strong>Publishing Editor:</strong> Dr. Tapaswini Mohanty</p>
+            <p>
+                <strong>Postal Address:</strong><br>
+                The Tribhuj Publishers<br>
+                Khasra Number 1517, Sangam Vihar Ganga Khera<br>
+                Kanpur Road Lucknow-226011, Uttar Pradesh, India
+            </p>
+
+            <h3>Journals Published by Us</h3>
+            <ul class="journals-list">
+                <li><a href="https://thetribhuj.com/tmsce/">Transactions on Mathematical Sciences and Computational Engineering (TMSCE)</a></li>
+                <li>Upcoming Journals in Mathematics, Computing, and Interdisciplinary Sciences (to be announced)</li>
+            </ul>
+
+            <h3>Book Publishing</h3>
+            <p>
+                If you are interested in publishing your book, monograph, or edited volume with us,
+                kindly get in touch. Our team will guide you through the publishing process and ensure
+                global visibility for your work.
+            </p>
         </div>
-        
-            <!-- New Contact Section -->
-    <div class="info-box">
-      <h2>Contact Us</h2>
-      <p>
-        We welcome your queries regarding journals, submissions, and collaborations.  
-        Please feel free to reach out to us:
-      </p>
-      <p><strong>Email:</strong> thetribhuj.official@gmail.com</p>
-      <p>   <strong>Publishing Editor: Dr. Tapaswini Mohanty</strong><br>  </p>
-      <p><strong>Postal Address:</strong><br>
-        The Tribhuj Publishers<br>
-        Khasra Number 1517, Sangam Vihar Ganga Khera<br> Kanpur Road Lucknow-226011, Uttar Pradesh, India
-      </p>
 
-      <h3>Journals Published by Us</h3>
-      <ul class="journals-list">
-        <li><a href="https://thetribhuj.com/tmsce/">Transactions on Mathematical Sciences and Computational Engineering (TMSCE)</a></li>
-        <li>Upcoming Journals in Mathematics, Computing, and Interdisciplinary Sciences (to be announced)</li>
-      </ul>
-
-      <h3>Book Publishing</h3>
-      <p>
-        If you are interested in publishing your book, monograph, or edited volume with us, kindly get in touch.  
-        Our team will guide you through the publishing process and ensure global visibility for your work.
-      </p>
-    </div>
     </main>
 </body>
 </html>
-
